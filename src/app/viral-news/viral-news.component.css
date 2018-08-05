@@ -1,0 +1,11 @@
+ul.list-grouped:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+  
+  .list-group-item {
+      float: left;
+      cursor: pointer;
+      margin: 0.1%;
+  }

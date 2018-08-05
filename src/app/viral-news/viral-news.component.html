@@ -1,0 +1,34 @@
+ <!-- Page Content -->
+ <div class="container">
+
+  <!-- Page Heading -->
+  <div class="row">
+  <h1 class="my-4">Top 20 News</h1>
+  <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 1%;">
+      <div class="list-grouped">
+          <a *ngFor=" let tags_list of tags" (click)='loadTags(tags_list)'  href="javascript::void(0)" class="list-group-item">{{tags_list}}</a>
+        </div>
+  </div>
+          
+  </div>
+  <!-- Project One -->
+
+  <div class="row" style="margin-bottom: 10px;" *ngFor="let news_list of news.articles">
+    <div class="col-md-7">
+      <a href="{{ news_list.url }}" target="_blank">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ news_list.urlToImage }}" alt="">
+      </a>
+    </div>
+    <div class="col-md-5">
+      <h3>{{ news_list.title }}</h3>
+      <a href="{{ news_list.url }}" class="fh5co_mini_time py-3"> 
+          {{ news_list.publishedAt |date:'fullDate'}} </a>
+      <p>{{ news_list.description }}</p>
+      <a class="btn btn-primary" target="_blank" href="{{ news_list.url }}">Read More..</a>
+    </div>
+    
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->

@@ -1,0 +1,23 @@
+<div class="container-fluid" style="margin-top: 1%;">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" routerLinkActive="active"><a routerLink='live_train' aria-controls="home" role="tab" data-toggle="tab">Live Train Status</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='pnr_status' aria-controls="profile" role="tab" data-toggle="tab">PNR Status</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='train_route' aria-controls="messages" role="tab" data-toggle="tab">Train Route</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='seat_avail' aria-controls="messages" role="tab" data-toggle="tab">Seat availability</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='train_between_stations' aria-controls="messages" role="tab" data-toggle="tab">Train Between Stations</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='fare_enquiry' aria-controls="messages" role="tab" data-toggle="tab">Train Fare Enquiry</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='train_arrival' aria-controls="messages" role="tab" data-toggle="tab">Train Arrivals</a> |</li>
+            <li role="presentation" routerLinkActive="active"><a routerLink='canceled_train' aria-controls="messages" role="tab" data-toggle="tab">Cancelled Trains</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
