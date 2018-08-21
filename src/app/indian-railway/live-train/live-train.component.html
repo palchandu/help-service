@@ -1,13 +1,67 @@
 <div class="col-sm-12 col-md-12 col-lg-12">
-  
-  <form>
+
     <div class="form-row">
       <div class="col">
-        <input type="text" class="form-control" placeholder="Enter train name or number">
+        <input type="text" id="typeahead-basic" (keyup)="onKey($event)"   class="form-control" placeholder="Enter train name or number">
       </div>
       <div class="col">
-        <button type="submit" class="btn btn-primary btn-lg">Find</button>
+        <button type="submit" class="btn btn-primary">Find</button>
       </div>
     </div>
-  </form>
+ 
+  <p>{{values}}</p>
+</div>
+
+
+
+
+
+<div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 2%;">
+
+<h3>Check Indian Railway’s Live Train Running Status</h3>
+<p>With the introduction of checking Train Running Status online, the whole process of enquiring about train has become extremely easy and time-efficient. Passengers can now simply check their train’s current running status on a single click. Erail is one of the most trustworthy and user-friendly application which enable you to check your train’s status precisely and hassle free. Erail has given all the Indian Railway passengers fastest way to get latest information and spot their train’s real time.</p>
+
+<h3>How to check live train status?</h3>
+<p>If you want to know the current and exact status of your train, you just have to enter your train’s name or its 5-digit number on the search bar and hit ‘Find Train’. You can then spot your train and know complete train running status as it gets reflected on your screen with extensive details such as where exactly the train is, when will it arrive from that particular station or when will it depart, train is between which two stations, and whether it is running as per the schedule timing or is itlate. Erail gives you an opportunity to enable notification and get notified with every train’s moment until it arrives at your departing station. One can check the train’s status on desktop, mobile or on tablet using Erail.in, as it is compatible on all platforms and devices. You no longer have to call up and face engaged dial tones of the Indian Railways Enquiry Office or visit directly to figure out the latest train running status. When you enter your train name or number the link will reflect the following:</p>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Present Train location – Station Name</li>
+    <li class="list-group-item">Time of Arrival</li>
+    <li class="list-group-item">Time of Departure</li>
+    <li class="list-group-item">Stoppage Duration</li>
+    <li class="list-group-item">Distance between two stations</li>
+    <li class="list-group-item">Information about delay</li>
+</ul>
+
+<p> Time of Arrival and Departure are updated real time and reflect the live train running status. Through this, Indian Railways passengers can figure out when will the train arrive or depart from a station.</p>
+
+<p>Indian Railways, the fourth largest railway network in the world, has over 11,000 trains running per day. In a survey done in 2015-16, an average of 13,313 passenger trains ran daily, carrying an estimated 22 million passengers a day, covering over 7,000 stations.</p>
+
+<p>With such a huge number of passengers travelling in train daily, it is very much important for a traveler to know their trains accurate running time to ensure their comfortable and safe journey. Erail, the best train enquiry system with its introduction is now helping lakhs of people every day to plan their journey time-efficiently and hassle free by checking their live train status online.</p>
+
+<h4>Which trains in Indian Railways run on time?</h4>
+<p>Rajdhani and Shatabdi train are premium trains which are given preference over other trains. Indian Railways tries to maintain the punctuality of these train.</p>
+
+<h4>Rajdhani Train</h4>
+<p>These are air-conditioned trains linking major cities to New Delhi. They have high priority and are one of the fastest trains in India, travelling at a maximum speed of around 130–140 km/h (81–87 mph). They have limited stops. In the Railway budget of 2014, it was proposed that the speed of Rajdhani express, and Shatabdi Expresses would be increased up 180 km/h (110 mph).</p>
+
+<h4>Shatabdi Train</h4>
+<p>The Shatabdi trains are air-conditioned, intercity trains for travel during daytime. Unlike the Rajdhani or Duronto Expresses, all Shatabdi expresses, it makes a round trip on same day. The Bhopal Shatabdi Express (Train no: 12001/12002) is one of the fastest train in India, between New Delhi and Agra cantonment, this train travels at an average speed of 90 km/h (56 mph) and touches top speed of 150 kilometres per hour (93 mph). They have seats and executive class seats, Some also have 3-tier AC berth. They have limited stops.</p>
+
+<h4>Duronto Trains</h4>
+<p>These are the non-stop (except for technical halts) point to point rail services introduced for the first time in 2009. They connect the metros and major state capitals of India and were introduced to travel as fast or faster than the Rajdhani Express. They provide first AC, two-tier AC and three-tier AC accommodation. Some of them provide non air-conditioned Sleeper Class accommodation.</p>
+
+<h4>Jan Shatabdi</h4>
+<p>Jan Shatabdi Express are more affordable variety of the Shatabdi Express, which have both AC and non-AC classes. The maximum speed is 110 km/h (68 mph). They have fewer stops.</p>
+
+<h4>Superfast Trains</h4>
+<p>These trains travel at a speed greater than 100–110 km/h (62–68 mph). Tickets for these trains have an additional superfast surcharge.</p>
+
+<h4>Mail Express Trains</h4>
+<p>These are the most common kind of trains in India. They have more stops than their super-fast counterparts, but they stop only at relatively important intermediate stations.</p>
+
+<h4>Passenger Trains</h4>
+<p>These trains travel at about 40–80 km/h (25–50 mph).</p>
+
+<h4>Intercity</h4>
+<p>These trains were introduced to connect important cities for short routes. These appear in both Superfast Express speed and Express speed category. Some of the famous legendary Intercity Express are Deccan Queen and Flying Ranee.</p>
 </div>

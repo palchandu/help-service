@@ -12,11 +12,15 @@
           
   </div>
   <!-- Project One -->
-
+  <!-- <div *ngIf="loading">
+    <img src="http://via.placeholder.com/350x150">
+  </div> -->
+  <div *ngIf="loading" class="loading">Loading&#8230;</div>
+  <div class="content">
   <div class="row" style="margin-bottom: 10px;" *ngFor="let news_list of news.articles">
     <div class="col-md-7">
       <a href="{{ news_list.url }}" target="_blank">
-        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ news_list.urlToImage }}" alt="">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ news_list.urlToImage ? news_list.urlToImage : 'http://via.placeholder.com/350x150' }}" alt="">
       </a>
     </div>
     <div class="col-md-5">
@@ -28,6 +32,7 @@
     </div>
     
   </div>
+</div>
   <!-- /.row -->
 
 </div>

@@ -7,15 +7,24 @@ import { ViralService } from './viral.service';
 })
 export class ViralNewsComponent implements OnInit {
   news={};
+  loading : boolean = false;
   tags=['Business','Technology','Sport','Art','Lifestyle','Photography','Education','Social'];
   constructor(private _viralService:ViralService) { 
     
   }
 
   ngOnInit() {
-    this._viralService.getViral().subscribe((viralData)=>this.news=viralData);
+    this.loading = true;
+    this._viralService.getViral().subscribe((viralData)=>{
+      this.loading = false;
+      this.news=viralData
+    });
   }
   loadTags(value){
-    this._viralService.getTagedNews(value).subscribe((viralData)=>this.news=viralData);
+    this.loading = true;
+    this._viralService.getTagedNews(value).subscribe((viralData)=>{
+      this.loading = false;
+      this.news=viralData
+    });
   }
 }

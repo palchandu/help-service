@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule,Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +13,7 @@ import { ViralNewsComponent } from './viral-news/viral-news.component';
 import { IndianRailwayComponent } from './indian-railway/indian-railway.component';
 import { IndianContactComponent } from './indian-contact/indian-contact.component';
 import { ViralService } from './viral-news/viral.service';
+import { RailwayService } from './indian-railway/railway.service';
 import { LiveTrainComponent } from './indian-railway/live-train/live-train.component';
 import { PnrStatusComponent } from './indian-railway/pnr-status/pnr-status.component';
 import { TrainRouteComponent } from './indian-railway/train-route/train-route.component';
@@ -19,6 +22,7 @@ import { TrainBetweenComponent } from './indian-railway/train-between/train-betw
 import { FareEnquiryComponent } from './indian-railway/fare-enquiry/fare-enquiry.component';
 import { TrainArrivalComponent } from './indian-railway/train-arrival/train-arrival.component';
 import { TrainCancelComponent } from './indian-railway/train-cancel/train-cancel.component';
+
 
 const appRoutes:Routes=[
   { path :'',component:ViralNewsComponent },
@@ -61,9 +65,11 @@ const appRoutes:Routes=[
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    NgbModule.forRoot()
   ],
-  providers: [ViralService],
+  providers: [ViralService,RailwayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
